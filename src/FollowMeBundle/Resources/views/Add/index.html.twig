@@ -1,0 +1,27 @@
+{% extends "@FollowMeBundle/Resources/views/base.html.twig" %}
+
+{% block title %}Add Event{% endblock %}
+
+{% block body %}
+<h1>Add</h1>
+
+{{ form_start(form, { "attr":{"novalidate": "novalidate"} } ) }}
+
+        {% include "@FollowMeBundle/Resources/views/form/sign_errors.html.twig" %}
+
+        {% if is_granted('ROLE_SUPER_ADMIN') %}
+            You have ROLE_SUPER_ADMIN
+        {% endif %}
+
+        {% include "@FollowMeBundle/Resources/views/form/input/add.html.twig" %}
+        
+        <div class="input-form">
+            <button class="btn-btn-success">Validate</button>
+        </div>
+
+    {{ form_end(form) }}
+
+
+
+
+{% endblock %}

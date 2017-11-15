@@ -1,0 +1,5 @@
+follow_me:
+    resource: "@FollowMeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

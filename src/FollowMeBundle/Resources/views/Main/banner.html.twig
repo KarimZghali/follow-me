@@ -1,0 +1,24 @@
+<div class="col-x-6">
+
+    <p>Publier une sortie et proposer aux membres
+        de vous accompagner</p>
+
+    {% if app.session.get('id') %}
+
+        <a class="btn btn-info" href="{{ path('dating') }}">Dating</a>
+        <a class="btn btn-info" href="{{ path('add') }}">Add</a>
+
+    {% else %}
+
+        <a class="btn btn-success" href="{{ path('signin') }}">Sign in</a>
+        <a class="btn btn-success" href="{{ path('signup') }}">Sign up</a>
+
+    {% endif %}
+
+    <div class="col-x-6">
+
+        <img src="{{ asset('bundles/followme/images/followme.jpg') }}"/>
+
+    </div>
+
+</div>

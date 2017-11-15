@@ -1,0 +1,48 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
+security:
+
+    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        in_memory:
+             memory:
+                 users:
+                     foo:
+                         password: $2y$12$CfEzYTDGX0r5dtdY4M7gI.gY1PAKCM22miqVmrTuhEuoSVWg/Ouea
+                         roles: ROLE_SUPER_ADMIN
+                     Rayan:
+                         password: $2y$12$mS7AsiivSVDtaNRNYlkU/OX.wujHimaPZ4gPrkNR308C/Hi4hEJFS
+                         roles: ROLE_ADMIN
+
+
+    encoders:
+        Symfony\Component\Security\Core\User\User:
+                    algorithm: bcrypt
+                    cost: 12
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+            # activate different ways to authenticate
+
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+            http_basic: ~
+
+            # https://symfony.com/doc/current/security/form_login_setup.html
+            #form_login: ~
+
+    role_hierarchy:
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN]
+
+    access_control:
+                # require ROLE_ADMIN for /admin*
+                    - { path: ^/admin, roles: ROLE_SUPER_ADMIN }
+                    - { path: ^/dating, roles: ROLE_ADMIN }
+
+
+

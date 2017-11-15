@@ -1,0 +1,17 @@
+/.web-server-pid
+/app/config/parameters.yml
+/build/
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/vendor/
+/web/bundles/
+/src/FollowMeBundle/Resources/public/node_modules/

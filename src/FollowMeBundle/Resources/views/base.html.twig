@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    <link rel="stylesheet" href="{{ asset('bundles/followme/node_modules/bootstrap/dist/css/bootstrap.css')}}" />
+
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="{{ path('main') }}">Follow me</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    {% if app.session.get('id') %}
+                    <li><a href="{{ path('signout') }}">Sign out</a></li>
+
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('dating') }}?page=1">Dating</a></li>
+                            <li><a href="{{ path('add') }}">Add</a></li>
+                        </ul>
+                    </li>
+
+                    {% else %}
+                    <li><a href="{{ path('signin') }}">Sign in</a></li>
+                    <li><a href="{{ path('signup') }}">Sign up</a></li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+    {% block javascripts %}{% endblock %}
+
+    <script type="text/javascript" src="{{ asset('bundles/followme/node_modules/jquery/dist/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/followme/node_modules/bootstrap/dist/js/bootstrap.js')}}"></script>
+
+</body>
+
+</html>

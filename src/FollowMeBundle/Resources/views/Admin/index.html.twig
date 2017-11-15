@@ -1,0 +1,46 @@
+{% extends "@FollowMeBundle/Resources/views/base.html.twig" %}
+
+{% block title %}User list{% endblock %}
+
+{% block body %}
+<h1>Dating</h1>
+
+
+    <div class="list-group">
+
+        {% if app.request.get('e') %}
+
+            L'élément à bien été supprimé.
+
+        {% endif %}
+
+
+        {% for liste in liste %}
+            <a href="#" class="list-group-item list-group-item-success"><td>Id : {{ liste.getUserId }}</td></a>
+            <a href="#" class="list-group-item list-group-item-success"><td>Email : {{ liste.getUserMail }}</td></a>
+
+            {% if is_granted('ROLE_ADMIN') %}
+                <a class="	glyphicon glyphicon-minus-sign" href="">   </a>
+            {% endif %}
+
+            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                <a class="glyphicon glyphicon-trash" href="{{ path('admin_user', { 'id': liste.getUserId() }) }}">   </a>
+            {% endif %}
+
+
+
+
+
+
+
+            <br/><br/>
+        {% endfor %}
+
+        <br/><br/>
+
+
+        {% include "@FollowMeBundle/Resources/views/ui/pages.html.twig" %}
+
+    </div>
+
+{% endblock %}

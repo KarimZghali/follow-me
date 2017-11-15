@@ -1,0 +1,33 @@
+foo: Hello
+sign.mail: Your email
+sign.pswd: Password
+sign.confirmation: Confirmation
+sign.mail.error: Please enter the email address
+sign.pswd.error: Please enter the password
+sign.pswd.error.nbr: The password must contain at least 8 characters
+sign.confirmation.error: Please confirm
+add.title: Title of your event
+add.title.error.regex: 10 characters max!
+add.title.error: Please enter a title
+add.title.placeholder: Example, Star Wars VIII Cinema
+add.description: Description of your event
+add.description.regex: Description too long!
+add.description.error: Please enter a description
+add.description.placeholder: Example for a 3D Imax session and Dolby Digital sound
+add.start: Start date
+add.start.error: Please enter a date
+add.start.placeholder: 10 octobre 2015
+add.end: End date
+add.end.error: Please enter a date
+add.end.placeholder: 15 October 2015
+add.lat: Latitude position
+add.lat.error: Please enter a Latitude position
+add.lat.placeholder: Example 4343356
+add.lng: Longitude position
+add.lng.error: Please enter a Longitude position
+add.lng.placeholder: Example 4243353
+add.link.title: Your link title
+add.link.title.placeholder: Example, Video trailer
+add.link.href: Your link
+add.link.href.placeholder: Example, http://www.youtube/starwars.com
+sign.error.duration: Durée invalide
