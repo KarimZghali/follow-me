@@ -3,20 +3,9 @@
 
 
 
-
 FOLLOW ME allows you to add outings with friends and share them with your network. Those who wish to participate can join your event. It's the end of loose evenings
 
 [![N|Solid](https://github.com/KarimZghali/follow-me/blob/master/resources/capt.jpg?raw=true)
-
-
-  - Account creation
-  - Adding events
-  - View events
-
-# Comming soon !
-
-  - Delete/edit events
-  - confirm participation in an event
 
 # Installation
 
@@ -25,4 +14,17 @@ Install Gitbash (https://git-for-windows.github.io/)
 Follow-Me requires Composer: dowload here (https://getcomposer.org/download/) or command-line: php composer-setup.php
 
 You need to install Bootstrap 3: composer require components/bootstrap)
+
+# Usage:
+
+  - Account creation
+  - Adding events
+  - View events
+
+# Comming soon :
+
+  - Delete/edit events
+  - confirm participation in an event
+
+
  

@@ -101,7 +101,7 @@ class DatingController extends Controller
     public function modified(Request $request)
     {
     	
-    	//le gmt envoy� par le client
+    	//le gmt envoyé par le client
     	$clientGMT = $request->headers->get("if-modified-since");
     	
     	if ($clientGMT && time() - (new \DateTime($clientGMT))->getTimestamp() < 5) {
