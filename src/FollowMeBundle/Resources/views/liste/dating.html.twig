@@ -1,16 +1,21 @@
 
-  <div class="list-group col-xs-12">
+
+
+
 
       {% for liste in liste %}
-          <a href="#" class="list-group-item list-group-item-success"><td>Titre : {{ liste.getDatingTitle }}</td></a>
-          <a href="#" class="list-group-item list-group-item-success"><td>Description : {{ liste.getDatingDescription }}</td></a>
-          <a href="#" class="list-group-item list-group-item-warning"><td>Date de début : {{ liste.getDatingStart }}</td></a>
-          <a href="#" class="list-group-item list-group-item-warning"><td>Date de fin : {{ liste.getDatingEnd  }}</td></a>
-          <a href="#" class="list-group-item list-group-item-danger"><td>Longitude : {{ liste.getDatingLat }}</td></a>
-          <a href="#" class="list-group-item list-group-item-danger"><td>Latitude : {{ liste.getDatingLng }}</td></a>
-          <a href="#" class="list-group-item list-group-item-info"><td>{{ liste.getDatingLinkTitle }} : </td></a>
-          <a href="#" class="list-group-item list-group-item-info"><td>{{ liste.getDatingLinkHref }}</td></a>
+      <div class="" style="text-align: center; width: 800px; margin-left: auto; margin-right: auto; border-radius: 20px; background-color: #3498db;">
+          <a href="#" class="" style="color: white;" ><td>Titre : {{ liste.getDatingTitle }}</td></a><br>
+          <a href="#" class=""  style="color: white;" ><td>Description : {{ liste.getDatingDescription }}</td></a><br>
+          <a href="#"  style="color: white;"  ><td>Date de début : {{ liste.getDatingStart }}</td></a><br>
+          <a href="#"  style="color: white;"  ><td>Date de fin : {{ liste.getDatingEnd  }}</td></a><br>
+          <a href="#"  style="color: white;"  ><td>Longitude : {{ liste.getDatingLat }}</td></a><br>
+          <a href="#"  style="color: white;"  ><td>Latitude : {{ liste.getDatingLng }}</td></a><br>
+          <a href="#"  style="color: white;"  ><td>{{ liste.getDatingLinkTitle }} : </td></a><br>
+          <a href="#"  style="color: white;"  ><td>{{ liste.getDatingLinkHref }}</td></a><br>
 
+      </div>
+          <br/><br/>
       {% endfor %}
 
           <br/><br/>
@@ -18,4 +23,3 @@
 
       {% include "@FollowMeBundle/Resources/views/ui/pages.html.twig" %}
 
-  </div>

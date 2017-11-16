@@ -1,7 +1,13 @@
-<div class="col-x-6">
+<div class="col-x-6" style="text-align: center">
 
-    <p>Publier une sortie et proposer aux membres
+    <p>Publiez une sortie et proposez aux membres
         de vous accompagner</p>
+
+    <div class="col-x-6">
+
+        <img src="{{ asset('bundles/followme/images/followme.jpg') }}"/><br><br>
+
+    </div>
 
     {% if app.session.get('id') %}
 
@@ -15,10 +21,6 @@
 
     {% endif %}
 
-    <div class="col-x-6">
 
-        <img src="{{ asset('bundles/followme/images/followme.jpg') }}"/>
-
-    </div>
 
 </div>
