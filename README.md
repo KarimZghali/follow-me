@@ -1,7 +1,13 @@
 
 [![N|Solid](https://www.followmebiketour.com/wp-content/uploads/2016/12/Follow-Me-Bangkok-bicycle-tours-logo-1.png)](https://www.followmebiketour.com/wp-content/uploads/2016/12/Follow-Me-Bangkok-bicycle-tours-logo-1.png)
 
+
+
+
 FOLLOW ME allows you to add outings with friends and share them with your network. Those who wish to participate can join your event. It's the end of loose evenings
+
+[![N|Solid](https://github.com/KarimZghali/follow-me/blob/master/resources/capt.jpg?raw=true)
+
 
   - Account creation
   - Adding events
